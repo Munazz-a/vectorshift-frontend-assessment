@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font and base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ReactFlow customizations */
+.react-flow__background {
+  background-color: #f3f4f6;
+}
+
+.react-flow__controls {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: white;
+}
+
+.react-flow__controls button {
+  border-color: #d1d5db;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.react-flow__controls button:hover {
+  background-color: #f3f4f6;
+  color: #1e2139;
+}
+
+.react-flow__minimap {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Node and edge styling */
+.react-flow__node {
+  box-shadow: none;
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 4px 12px rgba(61, 95, 168, 0.2);
+}
+
+.react-flow__edge-path {
+  stroke: #9ca3af;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #3d5fa8;
+  stroke-width: 2.5;
+}
+
+.react-flow__handle {
+  background-color: #3d5fa8;
+  border: 2px solid white;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  box-shadow: 0 4px 8px rgba(61, 95, 168, 0.3);
+  transform: scale(1.2);
+}
+
+.react-flow__handle-bottom {
+  bottom: -8px;
+}
+
+.react-flow__handle-top {
+  top: -8px;
+}
+
+/* Base node styling */
+.base-node {
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.2s ease !important;
+  padding: 12px !important;
+}
+
+.base-node:hover {
+  border-color: #3d5fa8 !important;
+  box-shadow: 0 4px 12px rgba(61, 95, 168, 0.15) !important;
+}
+
+.base-node.selected {
+  border-color: #3d5fa8 !important;
+  box-shadow: 0 4px 16px rgba(61, 95, 168, 0.25) !important;
+}
+
+/* Smooth connections */
+.react-flow__connection-line {
+  stroke: #3d5fa8;
+  stroke-width: 2;
+}

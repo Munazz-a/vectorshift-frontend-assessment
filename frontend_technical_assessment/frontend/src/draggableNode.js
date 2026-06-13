@@ -12,11 +12,13 @@ export const DraggableNode = ({ type, label }) => {
     <div
       className={`
         ${type}
-        px-4 py-3
+        px-6 py-3
         min-w-20
         rounded-base
-        bg-navy-700 hover:bg-navy-800
-        text-white text-sm font-medium
+        shadow-md
+        hover:-translate-y-0.5
+        bg-accent-success hover:bg-navy-800
+        text-white text-base font-medium
         cursor-grab active:cursor-grabbing
         transition-all duration-200
         select-none

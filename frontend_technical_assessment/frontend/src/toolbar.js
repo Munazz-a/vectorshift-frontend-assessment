@@ -6,7 +6,7 @@ export const PipelineToolbar = () => {
   return (
     <div className="p-lg flex items-center gap-lg">
       {/* Toolbar Label */}
-      <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+      <div className="text-m font-semibold text-slate-500 uppercase tracking-wide">
         Nodes
       </div>
 

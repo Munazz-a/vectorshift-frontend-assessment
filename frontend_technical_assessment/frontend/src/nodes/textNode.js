@@ -58,14 +58,11 @@ export const TextNode = ({ id, data, selected }) => {
   });
 
   const allHandles = [...variableHandles, ...staticHandles];
-  const minHeightNeeded = Math.max(140, variables.length * 30 + 120);
+  const minHeightNeeded = Math.max(180, variables.length * 25 + 140);
 
   return (
     <div
       ref={containerRef}
-      className={`
-        ${selected ? 'ring-2 ring-navy-600' : ''}
-      `}
       style={{
         minWidth: 280,
         minHeight: minHeightNeeded,

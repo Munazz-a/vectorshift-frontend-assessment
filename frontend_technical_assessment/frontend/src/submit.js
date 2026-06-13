@@ -63,10 +63,9 @@ DAG Status: ${dagStatus}
         className={`
           px-8 py-3
           text-base font-semibold
-          bg-accent-success hover:bg-navy-600
+          bg-accent-primary hover:bg-navy-700
           active:bg-navy-600
           text-white
-          border border-green-700
           rounded-base
           cursor-pointer
           transition-all duration-200

@@ -32,8 +32,8 @@ module.exports = {
           900: '#111827',
         },
         accent: {
-          primary: '#3d5fa8', // Navy blue
-          success: '#4c488b',  // Green (for submit button)
+          primary: '#1f3f80', // Navy blue
+          success: '#333060',  // Dark purple
           warning: '#f59e0b',  // Amber
           error: '#ef4444',    // Red
         },

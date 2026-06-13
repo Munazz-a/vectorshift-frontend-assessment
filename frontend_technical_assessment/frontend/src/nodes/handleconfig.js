@@ -39,12 +39,15 @@ export const createHandle = (id, type, position, offset = null, label = null) =>
  */
 export const renderHandles = (handlesConfig) => {
   return handlesConfig.map((handleConfig) => {
-    const style = {};
+    const style = {
+      width: '8px',
+      height: '8px',
+    };
 
     if (handleConfig.offset !== null) {
       style.top = `${handleConfig.offset}%`;
       style.transform = 'translateY(-50%)';
-    }
+    } 
 
     // if(handleConfig.position === HANDLE_POSITIONS.Right){
     //   style.right = '-6px';

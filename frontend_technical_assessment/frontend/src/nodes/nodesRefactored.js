@@ -108,27 +108,3 @@ export const LLMNode = createNodeComponent({
     temperature: '0.7',
   },
 });
-
-/**
- * TEXT NODE - Refactored
- */
-// export const TextNode = createNodeComponent({
-//   title: 'Text',
-//   description: 'Text processing',
-//   className: 'text-node',
-//   width: 240,
-//   minHeight: 120,
-//   getHandles: HANDLES_SINGLE_OUTPUT,
-//   fields: [
-//     {
-//       name: 'text',
-//       label: 'Text',
-//       type: 'textarea',
-//       rows: 3,
-//       placeholder: 'Enter text with {{variables}}',
-//     },
-//   ],
-//   initialState: {
-//     text: '{{input}}',
-//   },
-// });

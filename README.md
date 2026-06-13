@@ -1,6 +1,18 @@
 # VectorShift Frontend Technical Assessment
 A modern, enterprise-grade pipeline builder with drag-and-drop node composition, dynamic variable binding, and backend DAG validation.
 
+## 📸 Demo
+
+### Pipeline Builder with Connected Nodes
+![Pipeline UI](./screenshots/frontend.png)
+*The frontend showing Input, LLM, Output, and Text nodes connected in a pipeline.*
+
+### Backend Validation Alert
+![Backend Validation](./screenshots/alert.png)
+*Alert displaying the pipeline analysis: node count, edge count, and DAG validation status.*
+
+---
+
 ## Priority-based organisation
 
 **Part 4 - Backend Integration ⭐⭐⭐**

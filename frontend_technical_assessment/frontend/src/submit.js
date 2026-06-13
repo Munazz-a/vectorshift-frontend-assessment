@@ -1,8 +1,5 @@
 // submit.js
 
-// frontend/src/submit.js
-// Updated for Part 4: Send pipeline to backend for validation
-
 import { useStore } from './store';
 import { shallow } from 'zustand/shallow';
 
@@ -14,7 +11,7 @@ export const SubmitButton = () => {
 
   const { nodes, edges } = useStore(selector, shallow);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async () => { 
     if (nodes.length === 0) {
       alert('❌ Error: Please add at least one node to the pipeline');
       return;
@@ -40,13 +37,13 @@ export const SubmitButton = () => {
       const data = await response.json();
       const dagStatus = data.is_dag ? '✓ Valid DAG' : '✗ Cycle Detected';
       const message = `
-Pipeline Analysis
-━━━━━━━━━━━━━━━
-Nodes: ${data.num_nodes}
-Edges: ${data.num_edges}
-DAG Status: ${dagStatus}
-━━━━━━━━━━━━━━━
-      `.trim();
+        Pipeline Analysis
+        ━━━━━━━━━━━━━━━
+        Nodes: ${data.num_nodes}
+        Edges: ${data.num_edges}
+        DAG Status: ${dagStatus}
+        ━━━━━━━━━━━━━━━
+              `.trim();
 
       alert(message);
       console.log('Backend Response:', data);

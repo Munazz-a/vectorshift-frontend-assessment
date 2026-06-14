@@ -95,6 +95,7 @@ export const TextNode = ({ id, data, selected }) => {
         value={currText}
         onChange={handleTextChange}
         placeholder="Enter text with {{variables}}"
+        onWheel={(e) => e.stopPropagation()}
         style={{
           width: '100%',
           padding: '8px',
@@ -103,11 +104,12 @@ export const TextNode = ({ id, data, selected }) => {
           fontSize: '12px',
           fontFamily: 'monospace',
           resize: 'none',
-          overflow: 'hidden',
+          overflow: 'auto',
           boxSizing: 'border-box',
           lineHeight: '1.4',
           transition: 'all 0.2s ease',
           outline: 'none',
+          maxHeight: '300px',
         }}
         onFocus={(e) => {
           e.target.style.borderColor = '#3d5fa8';

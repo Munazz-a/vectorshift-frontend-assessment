@@ -35,27 +35,28 @@ export const useStore = create((set, get) => ({
         edges: applyEdgeChanges(changes, get().edges),
       });
     },
+    
     onConnect: (connection) => {
-  // Check if edge already exists (prevents duplicates)
-    const newEdge = {
-      ...connection, 
-      type: 'smoothstep', 
-      animated: true, 
-      markerEnd: {type: MarkerType.Arrow, height: '20px', width: '20px'}
-    };
-    
-    const isDuplicate = get().edges.some(e => 
-      e.source === newEdge.source && 
-      e.target === newEdge.target &&
-      e.sourceHandle === newEdge.sourceHandle &&
-      e.targetHandle === newEdge.targetHandle
-    );
-    
-    if (!isDuplicate) {
-      set({
-        edges: addEdge(newEdge, get().edges),
-      });
-    }
+      // Check if edge already exists (prevents duplicates)
+      const newEdge = {
+        ...connection, 
+        type: 'smoothstep', 
+        animated: true, 
+        markerEnd: {type: MarkerType.Arrow, height: '20px', width: '20px'}
+      };
+      
+      const isDuplicate = get().edges.some(e => 
+        e.source === newEdge.source && 
+        e.target === newEdge.target &&
+        e.sourceHandle === newEdge.sourceHandle &&
+        e.targetHandle === newEdge.targetHandle
+      );
+      
+      if (!isDuplicate) {
+        set({
+          edges: addEdge(newEdge, get().edges),
+        });
+      }
     },
     updateNodeField: (nodeId, fieldName, fieldValue) => {
       set({

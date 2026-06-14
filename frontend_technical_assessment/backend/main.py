@@ -41,9 +41,8 @@ class PipelineResponse(BaseModel):
     num_edges: int
     is_dag: bool
 
-# ============================================
 # DAG CHECKING ALGORITHM (Kahn's Algorithm)
-# ============================================
+
 
 def is_directed_acyclic_graph(nodes: List[Node], edges: List[Edge]) -> bool:
     """

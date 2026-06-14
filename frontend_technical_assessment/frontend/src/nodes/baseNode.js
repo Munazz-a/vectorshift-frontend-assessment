@@ -139,48 +139,6 @@ const NodeFields = ({ fields, state, handleChange }) => {
           );
         }
 
-        if (field.type === 'textarea') {
-          return (
-            <div key={field.name} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <label
-                style={{
-                  fontSize: '11px',
-                  fontWeight: '600',
-                  color: '#374151',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.3px',
-                }}
-              >
-                {field.label}
-              </label>
-              <textarea
-                value={state[field.name] || ''}
-                onChange={handleChange(field.name)}
-                placeholder={field.placeholder || ''}
-                rows={field.rows || 3}
-                style={{
-                  padding: '6px 8px',
-                  borderRadius: '4px',
-                  border: '1px solid #d1d5db',
-                  fontSize: '12px',
-                  fontFamily: 'monospace',
-                  resize: 'vertical',
-                  transition: 'all 0.2s ease',
-                  outline: 'none',
-                }}
-                onFocus={(e) => {
-                  e.target.style.borderColor = '#3d5fa8';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(61, 95, 168, 0.1)';
-                }}
-                onBlur={(e) => {
-                  e.target.style.borderColor = '#d1d5db';
-                  e.target.style.boxShadow = 'none';
-                }}
-              />
-            </div>
-          );
-        }
-
         if (field.type === 'select') {
           return (
             <div key={field.name} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>

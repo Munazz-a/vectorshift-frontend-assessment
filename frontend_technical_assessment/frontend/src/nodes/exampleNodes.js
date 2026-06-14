@@ -4,11 +4,11 @@
 
 import { createNodeComponent } from './baseNode';
 import {
-  HANDLES_SINGLE_OUTPUT,
-  HANDLES_SINGLE_INPUT,
+  // HANDLES_SINGLE_OUTPUT,
+  // HANDLES_SINGLE_INPUT,
   HANDLES_PROCESSOR,
   HANDLES_MERGER,
-  HANDLES_SPLITTER,
+  // HANDLES_SPLITTER,
   createHandle,
   HANDLE_POSITIONS,
 } from './handleconfig';
@@ -285,7 +285,7 @@ export const JoinNode = createNodeComponent({
  * Export all nodes
  */
 // export {
-// //   FilterNode,
+//   FilterNode,
 //   DatabaseNode,
 //   APINode,
 //   FormatterNode,

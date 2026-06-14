@@ -58,7 +58,7 @@ export const TextNode = ({ id, data, selected }) => {
   });
 
   const allHandles = [...variableHandles, ...staticHandles];
-  const minHeightNeeded = Math.max(180, variables.length * 25 + 140);
+  const minHeightNeeded = Math.max(140, variables.length * 28 + 120);
 
   return (
     <div

@@ -17,9 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ============================================
 # REQUEST/RESPONSE MODELS
-# ============================================
 
 class Node(BaseModel):
     id: str
@@ -102,9 +100,9 @@ def is_directed_acyclic_graph(nodes: List[Node], edges: List[Edge]) -> bool:
     # If some nodes remain, they're part of a cycle
     return processed_count == len(nodes)
 
-# ============================================
+
 # API ENDPOINTS
-# ============================================
+
 
 @app.post("/pipelines/parse", response_model=PipelineResponse)
 async def parse_pipeline(request: PipelineRequest):
